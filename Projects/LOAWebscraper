@@ -1,0 +1,10 @@
+import urllib.request
+import bs4
+
+
+url = 'https://lotsofauctions.com/'
+response = requests.get(url)
+
+soup = BeautifulSoup(response.text, 'html.parser')
+data = soup.find('div', class_='example-class').text
+print(data)
